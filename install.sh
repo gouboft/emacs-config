@@ -13,6 +13,9 @@ echo "make dictionary for auto backup and auto save"
 mkdir ~/.emacs.d/auto-backup
 mkdir ~/.emacs.d/auto-save
 
+echo "cp ecb user layouts config file to ~/"
+cp ./tmp/.ecb-user-layouts.el ~/
+
 echo ""
 echo "All Done!"
 
