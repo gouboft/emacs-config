@@ -34,4 +34,7 @@
 (global-set-key [f3] 'highlight-symbol-next)
 (global-set-key [f4] 'highlight-symbol-prev)
 
+;; Goto line
+(global-set-key [f5] 'goto-line)
+
 (provide 'program-settings)
