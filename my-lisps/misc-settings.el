@@ -44,13 +44,9 @@
 (global-set-key ";" 'eim-insert-ascii)
 (global-set-key (kbd "M-?") 'eim-punc-translate-toggle)
 
-;; Ibuffer mode
+; Ibuffer mode
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
-
-;; Icicle mode
-(require 'icicles)
-(icy-mode 1)
 
 (require 'ido)
 (ido-mode 1)
