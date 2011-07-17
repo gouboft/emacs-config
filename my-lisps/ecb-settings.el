@@ -8,6 +8,7 @@
 (custom-set-faces
 )
 
+
 ;; Key settings
 (global-set-key (kbd "C-l") 'ecb-goto-window-methods)
 (global-set-key (kbd "C-x ;") 'ecb-goto-window-sources)

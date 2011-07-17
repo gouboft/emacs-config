@@ -15,7 +15,14 @@
   (local-set-key (kbd "[") 'skeleton-pair-insert-maybe))
 (add-hook 'c-mode-hook 'my-c-mode-auto-pair)
 
+;; Enable line number
+(global-linum-mode 1)
+(column-number-mode 1)
 
-
+;; Yasnippet settings
+(defconst yasnippet-load-path
+  (concat my-emacs-download-path "yasnippet-0.6.1c/snippets"))
+(yas/initialize)
+(yas/load-directory yasnippet-load-path)
 
 (provide 'program-settings)

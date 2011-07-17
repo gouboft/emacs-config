@@ -15,6 +15,9 @@
 ;; Server mode open
 (server-start)
 
+;; Misc setting
+(require 'misc-settings)
+
 ;; CEDET
 (require 'cedet-settings)
 
@@ -25,10 +28,6 @@
 ;; Recentf
 (require 'recentf)
 (recentf-mode 1)
-
-;; Disable Tool bar and Scroll bar
-(tool-bar-mode nil)
-(scroll-bar-mode nil)
 
 ;; Face settings
 (require 'face-settings)
@@ -44,23 +43,16 @@
 (setq cscope-do-not-update-database t)
 
 ;; Yasnippet
+;; config in program-settings
 (require 'yasnippet)
-(defconst yasnippet-load-path
-  (concat my-emacs-download-path "yasnippet-0.6.1c/snippets"))
-(yas/initialize)
-(yas/load-directory yasnippet-load-path)
 
 ;; Program settings
 (require 'program-settings)
 
-;; Yes or No to y/n
-(defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Minibuffer complete
 (require 'minibuffer-complete-cycle)
 
-;; Misc setting
-;; 1.shell exit close buff
-;; 2.
 
-(require 'misc-settings)
+;; Active ECB, should place at last
+(ecb-activate)
