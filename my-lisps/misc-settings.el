@@ -1,10 +1,10 @@
 ;; When shell was exit, close the buffer
-(add-hook 'shell-mode-hook 'wcy-shell-mode-hook-func)
-(defun wcy-shell-mode-hook-func  ()
+(add-hook 'shell-mode-hook 'shell-mode-hook-func)
+(defun shell-mode-hook-func  ()
   (set-process-sentinel (get-buffer-process (current-buffer))
-                            #'wcy-shell-mode-kill-buffer-on-exit)
+                            #'shell-mode-kill-buffer-on-exit)
       )
-(defun wcy-shell-mode-kill-buffer-on-exit (process state)
+(defun shell-mode-kill-buffer-on-exit (process state)
   (message "%s" state)
   (if (or
        (string-match "exited abnormally with code.*" state)
@@ -21,5 +21,27 @@
 
 ;; Yes or No to y/n
 (defalias 'yes-or-no-p 'y-or-n-p)
+
+;; Input Methods
+(require 'eim-extra)
+(autoload 'eim-use-package "eim" "Another emacs input method")
+(setq eim-use-tooltip nil)              ; don't use tooltip
+(setq eim-punc-translate-p nil)         ; use English punctuation
+(register-input-method
+ "chinese-wubi" "euc-cn" 'eim-use-package
+ "五" "EIM Wubi Input Method" "wb.txt"
+ 'my-eim-wb-activate-function)
+(defun my-eim-wb-activate-function ()
+  (add-hook 'eim-active-hook 
+        (lambda ()
+          (let ((map (eim-mode-map)))
+            (define-key map "-" 'eim-previous-page)
+            (define-key map "=" 'eim-next-page)))))
+(setq eim-wb-use-gbk t)
+;;set wubi for the default input method
+(setq default-input-method 'chinese-wubi)
+;; 用 ; 暂时输入英文
+(global-set-key ";" 'eim-insert-ascii)
+(global-set-key (kbd "M-?") 'eim-punc-translate-toggle)
 
 (provide 'misc-settings)
