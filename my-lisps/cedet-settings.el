@@ -1,6 +1,7 @@
 ;; Load CEDET.
 ;; See cedet/common/cedet.info for configuration details.
-(load-file "~/.emacs.d/emacs-config/download/cedet-1.0pre7/common/cedet.el")
+(defconst cedet-el-path (concat my-emacs-download-path "cedet-1.0pre7/common/cedet.el"))
+(load-file cedet-el-path)
 
 
 ;; Enable EDE (Project Management) features
@@ -22,7 +23,7 @@
 
 ;; * This enables even more coding tools such as intellisense mode
 ;;   decoration mode, and stickyfunc mode (plus regular code helpers)
-;; (semantic-load-enable-gaudy-code-helpers)
+(semantic-load-enable-gaudy-code-helpers)
 
 ;; * This enables the use of Exuberent ctags if you have it installed.
 ;;   If you use C++ templates or boost, you should NOT enable it.
@@ -34,8 +35,10 @@
 ;; (semantic-load-enable-secondary-exuberent-ctags-support)
 
 ;; Enable SRecode (Template management) minor-mode.
-;; (global-srecode-minor-mode 1)
+(global-srecode-minor-mode 1)
 
 (setq semantic-load-turn-everything-on t)
+
+(semantic-load-enable-excessive-code-helpers)
 
 (provide 'cedet-settings)
