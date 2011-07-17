@@ -38,10 +38,14 @@
             (define-key map "-" 'eim-previous-page)
             (define-key map "=" 'eim-next-page)))))
 (setq eim-wb-use-gbk t)
-;;set wubi for the default input method
+;; Set wubi for the default input method
 (setq default-input-method 'chinese-wubi)
 ;; 用 ; 暂时输入英文
 (global-set-key ";" 'eim-insert-ascii)
 (global-set-key (kbd "M-?") 'eim-punc-translate-toggle)
+
+;; Ibuffer mode
+(global-set-key (kbd "C-x C-b") 'ibuffer)
+(autoload 'ibuffer "ibuffer" "List buffers." t)
 
 (provide 'misc-settings)
