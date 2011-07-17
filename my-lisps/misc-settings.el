@@ -48,4 +48,11 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
+;; Icicle mode
+(require 'icicles)
+(icy-mode 1)
+
+(require 'ido)
+(ido-mode 1)
+
 (provide 'misc-settings)

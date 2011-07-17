@@ -49,10 +49,8 @@
 ;; Program settings
 (require 'program-settings)
 
-
 ;; Minibuffer complete
 (require 'minibuffer-complete-cycle)
-
 
 ;; Active ECB, should place at last
 (ecb-activate)
