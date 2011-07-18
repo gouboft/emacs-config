@@ -7,7 +7,7 @@ echo ""
 echo "backup the old \".emacs\" to \".emacs.backup\""
 mv ~/.emacs ~/.emacs.backup
 
-ln -s ./.emacs ~/.emacs
+ln -s ~/.emacs.d/emacs-config/.emacs ~/.emacs
 
 echo "make dictionary for auto backup and auto save"
 mkdir ~/.emacs.d/auto-backup
