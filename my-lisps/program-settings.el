@@ -1,3 +1,9 @@
+;; Set C language style
+(setq c-default-style "linux")
+(setq-default c-basic-offset 8
+	      tab-width 8
+	      indent-tabs-mode t)
+
 ;; Auto add bracket and quotation marks
 (add-hook 'c-mode-hook 'hs-minor-mode)
 (defun my-c-mode-auto-pair ()
@@ -39,9 +45,9 @@
 
 ;; Semantic jump setting
 ;; jump to define
-(global-set-key [f9] 'semantic-ia-fast-jump)
+(global-set-key [f8] 'semantic-ia-fast-jump)
 ;; jump back after jump to define
-(global-set-key [f10]
+(global-set-key [f9]
                 (lambda ()
                   (interactive)
                   (if (ring-empty-p (oref semantic-mru-bookmark-ring ring))
@@ -54,6 +60,7 @@
                         (setq first (cdr (car (cdr alist)))))
                     (semantic-mrub-switch-tags first))))
 
-
+;; Paren match highlighting
+(show-paren-mode t)
 
 (provide 'program-settings)
