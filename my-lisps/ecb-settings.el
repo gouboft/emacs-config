@@ -13,6 +13,7 @@
 (global-set-key (kbd "C-l") 'ecb-goto-window-methods)
 (global-set-key (kbd "C-x ;") 'ecb-goto-window-sources)
 (global-set-key (kbd "C-;") 'ecb-goto-window-edit1)
+(global-set-key (kbd "C-'") 'ecb-goto-window-edit2)
 (global-set-key (kbd "C-x {") 'ecb-activate)
 (global-set-key (kbd "C-x }") 'ecb-deactivate)
 
