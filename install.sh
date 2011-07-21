@@ -16,6 +16,9 @@ mkdir ~/.emacs.d/auto-save
 echo "cp ecb user layouts config file to ~/"
 cp ./tmp/.ecb-user-layouts.el ~/
 
+echo "setup cscope"
+sudo apt-get install cscope cscope-el
+
 echo ""
 echo "All Done!"
 
