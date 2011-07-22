@@ -48,7 +48,15 @@
 (global-set-key (kbd "C-x C-b") 'ibuffer)
 (autoload 'ibuffer "ibuffer" "List buffers." t)
 
+;; ido
 (require 'ido)
 (ido-mode 1)
+
+;; Show killing-ring
+(require 'browse-kill-ring+)
+(global-set-key "\C-cy" '(lambda ()
+                         (interactive)
+                         (popup-menu 'yank-menu)))
+
 
 (provide 'misc-settings)
