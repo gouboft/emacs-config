@@ -37,8 +37,8 @@
 ;; High light symbol
 (require 'highlight-symbol)
 (global-set-key [f2] 'highlight-symbol-at-point)
-(global-set-key [f3] 'highlight-symbol-next)
-(global-set-key [f4] 'highlight-symbol-prev)
+(global-set-key [f4] 'highlight-symbol-next)
+(global-set-key [f3] 'highlight-symbol-prev)
 
 ;; Goto line
 (global-set-key [f5] 'goto-line)
@@ -62,5 +62,4 @@
 
 ;; Paren match highlighting
 (show-paren-mode t)
-
 (provide 'program-settings)
