@@ -69,4 +69,7 @@
 (global-set-key "\C-cep" 'evernote-post-region)
 (global-set-key "\C-ceb" 'evernote-browser)
 
+;; W3m configuration
+(setq w3m-default-display-inline-images t)
+
 (provide 'misc-settings)
