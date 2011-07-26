@@ -125,9 +125,9 @@ You should define the options of your own filters in this group."
   :type 'string
   :set 'recentf-menu-customization-changed)
 
-(defcustom recentf-menu-path (if (featurep 'xemacs)
+(defcustom recentf-menu-path (if (featurep 'emacs)
                                  '("File")
-                               '("files"))
+			       '("files"))
   "*Path where to add the recentf menu.
 If nil add it at top level (see also `easy-menu-change')."
   :group 'recentf
