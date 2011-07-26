@@ -273,7 +273,7 @@
 (vim:nmap "gU" 'vim:cmd-make-upcase)
 (vim:nmap "gu" 'vim:cmd-make-downcase)
 
-;(vim:omap (kbd "C-e") 'vim:scroll-line-down)
+(vim:omap (kbd "C-e") 'vim:scroll-line-down)
 (vim:omap (kbd "C-d") 'vim:scroll-down)
 (vim:omap (kbd "C-f") 'vim:scroll-page-down)
 (vim:omap "z+" 'vim:scroll-bottom-line-to-top)
