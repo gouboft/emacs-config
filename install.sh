@@ -19,8 +19,8 @@ echo "3. Copy ecb user layouts config file to ~/"
 cp ./tmp/.ecb-user-layouts.el ~/
 echo ""
 # Step 4
-echo "4. Install cscope and ruby"
-sudo apt-get install cscope cscope-el ruby > /dev/null
+echo "4. Install cscope ruby w3m"
+sudo apt-get install cscope cscope-el ruby w3m > /dev/null
 # set for evernote
 cd ./download/evernote-0.30/ruby
 sudo ruby setup.rb

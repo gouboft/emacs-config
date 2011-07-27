@@ -14,6 +14,7 @@
 
 ;; Server mode open
 (server-start)
+(global-set-key (kbd "C-,") 'server-edit)
 
 ;; Misc setting
 (require 'misc-settings)
