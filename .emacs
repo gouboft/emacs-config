@@ -28,7 +28,7 @@
 
 ;; Recentf
 (require 'recentf)
-(recentf-mode 1)
+;(recentf-mode 1)
 
 ;; Face settings
 (require 'face-settings)
