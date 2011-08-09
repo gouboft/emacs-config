@@ -21,6 +21,7 @@ echo ""
 # Step 4
 echo "4. Install cscope ruby w3m"
 sudo apt-get install cscope cscope-el ruby w3m > /dev/null
+sudo cp ./tmp/cscope-indexer /usr/bin/cscope-indexer
 # set for evernote
 cd ./download/evernote-0.30/ruby
 sudo ruby setup.rb
