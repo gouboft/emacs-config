@@ -6,13 +6,27 @@ echo "Note: the \"emacs-config\" should place in the path: ~/.emacs.d/"
 echo ""
 # Step 1
 echo "1. backup the old \".emacs\" to \".emacs.backup\""
-mv ~/.emacs ~/.emacs.backup
-ln -s ~/.emacs.d/emacs-config/.emacs ~/.emacs
+if [ -f ~/.emacs ]; then
+    mv ~/.emacs ~/emacs.backup
+    echo "Your ~/.emacs file is copyed to emacs.backup."
+    ln -s ~/.emacs.d/emacs-config/.emacs ~/.emacs
+else
+    ln -s ~/.emacs.d/emacs-config/.emacs ~/.emacs
+fi
 echo ""
 # Step 2
 echo "2. make dictionary for auto backup and auto save"
-mkdir ~/.emacs.d/auto-backup
-mkdir ~/.emacs.d/auto-save
+if [ -d ~/.emacs.d/auto-backup ]; then
+    #do nothing
+else
+    mkdir ~/.emacs.d/auto-backup
+fi
+
+if [ -d ~/.emacs.d/auto-save ]; then
+    #do nothing
+else
+    mkdir ~/.emacs.d/auto-save
+fi
 echo ""
 # Step 3
 echo "3. Copy ecb user layouts config file to ~/"
@@ -25,8 +39,6 @@ sudo cp ./tmp/cscope-indexer /usr/bin/cscope-indexer
 # set for evernote
 cd ./download/evernote-0.30/ruby
 sudo ruby setup.rb
-
-echo "alias em='emacsclient'" >> ~/.bashrc
 
 echo ""
 echo "All Done!"
