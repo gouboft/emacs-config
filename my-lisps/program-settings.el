@@ -62,4 +62,8 @@
 
 ;; Paren match highlighting
 (show-paren-mode t)
+
+;; For jde
+(require 'jde)
+
 (provide 'program-settings)
