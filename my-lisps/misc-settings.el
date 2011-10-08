@@ -72,4 +72,28 @@
 ;; W3m configuration
 (setq w3m-default-display-inline-images t)
 
+;; iimage mode
+(autoload 'iimage-mode "iimage" "Support Inline image minor mode." t)
+(autoload 'turn-on-iimage-mode "iimage" "Turn on Inline image minor mode." t)
+(defun org-toggle-iimage-in-org ()
+  "display images in your org file"
+  (interactive)
+  (if (face-underline-p 'org-link)
+      (set-face-underline-p 'org-link nil)
+      (set-face-underline-p 'org-link t))
+  (iimage-mode))
+(add-hook 'org-mode-hook 'iimage-mode)
+
+;; Org mode
+(setq org-todo-keywords
+      '((sequence "TODO(t)" "DOING(i!)" "HANGUP(h@/!)" "|" "DONE(d@!)" "CANCEL(c@!)")))
+;; Auto word wrap
+(add-hook 'org-mode-hook
+      (lambda ()
+        (setq truncate-lines nil)))
+;;Hide stars and insert timestamp and note when task was done
+(setq org-hide-leading-stars t)
+(setq org-log-done 'time)
+(setq org-log-done 'note)
+
 (provide 'misc-settings)
