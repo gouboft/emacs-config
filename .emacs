@@ -55,3 +55,20 @@
 
 ;; Active ECB, should place at last
 (ecb-activate)
+(custom-set-variables
+  ;; custom-set-variables was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ '(ecb-layout-name "right5")
+ '(ecb-methods-menu-sorter (lambda (entries) (let ((sorted (copy-list entries))) (sort sorted (quote string-lessp)))))
+ '(ecb-options-version "2.40")
+ '(ecb-tip-of-the-day nil)
+ '(ecb-windows-width 38)
+ '(safe-local-variable-values (quote ((eval add-hook (quote write-file-hooks) (quote time-stamp))))))
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )

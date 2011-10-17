@@ -17,13 +17,13 @@ echo ""
 # Step 2
 echo "2. make dictionary for auto backup and auto save"
 if [ -d ~/.emacs.d/auto-backup ]; then
-    #do nothing
+    echo "folder auto-backup is exist"
 else
     mkdir ~/.emacs.d/auto-backup
 fi
 
 if [ -d ~/.emacs.d/auto-save ]; then
-    #do nothing
+    echo "folder auto-save is exist"
 else
     mkdir ~/.emacs.d/auto-save
 fi

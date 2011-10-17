@@ -64,6 +64,6 @@
 (show-paren-mode t)
 
 ;; For jde
-(require 'jde)
+;(require 'jde) ;; Never use it, and there will be an error when it open
 
 (provide 'program-settings)
