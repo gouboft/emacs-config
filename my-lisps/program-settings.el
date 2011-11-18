@@ -66,4 +66,11 @@
 ;; For jde
 ;(require 'jde) ;; Never use it, and there will be an error when it open
 
+;; Cscope keybinding
+(define-key global-map [(meta n)]  'cscope-find-global-definition)  ;default: C-c s d
+(define-key global-map [(meta \[)]  'cscope-find-this-symbol)  ;default: C-c s s
+(define-key global-map [(meta \])]  'cscope-find-functions-calling-this-function)  ;default: C-c s c
+(define-key global-map [(meta p)]  'cscope-pop-mark)  ;default: C-c s u
+
+
 (provide 'program-settings)
