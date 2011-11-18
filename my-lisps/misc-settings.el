@@ -96,4 +96,8 @@
 (setq org-log-done 'time)
 (setq org-log-done 'note)
 
+;; Markdown-mode
+(autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
+(setq auto-mode-alist (cons '("\\.text" . markdown-mode) auto-mode-alist))
+
 (provide 'misc-settings)
