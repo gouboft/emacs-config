@@ -73,4 +73,14 @@
 (define-key global-map [(meta p)]  'cscope-pop-mark)  ;default: C-c s u
 
 
+;; llvm
+(require 'llvm-mode)
+(require 'tablegen-mode)
+
+;; Clang complete
+(load-library "clang-completion-mode")
+;(require 'clang-completion-mode)
+(define-key global-map [(meta \-)]  'clang-completion-mode)
+
+
 (provide 'program-settings)
