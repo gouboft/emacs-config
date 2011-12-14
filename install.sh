@@ -9,9 +9,9 @@ echo "1. backup the old \".emacs\" to \".emacs.backup\""
 if [ -f ~/.emacs ]; then
     mv ~/.emacs ~/emacs.backup
     echo "Your ~/.emacs file is copyed to emacs.backup."
-    ln -s ~/.emacs.d/emacs-config/.emacs ~/.emacs
+    ln -s ~/.emacs.d/emacs-config/emacs ~/.emacs
 else
-    ln -s ~/.emacs.d/emacs-config/.emacs ~/.emacs
+    ln -s ~/.emacs.d/emacs-config/emacs ~/.emacs
 fi
 echo ""
 # Step 2
