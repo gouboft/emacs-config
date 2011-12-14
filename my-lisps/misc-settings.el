@@ -101,3 +101,7 @@
 (setq auto-mode-alist (cons '("\\.text" . markdown-mode) auto-mode-alist))
 
 (provide 'misc-settings)
+
+;; Next / Previous buffer key bonding
+(global-set-key "\C-xn" 'next-buffer)
+(global-set-key "\C-xp" 'previous-buffer)
