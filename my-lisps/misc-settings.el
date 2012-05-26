@@ -20,7 +20,7 @@
 (desktop-save-mode 1)
 
 ;; Modify the title of the emacs
-(setq frame-title-format "%f")
+(setq frame-title-format "%f@%b")
 
 ;; Support the copy/past between emacs and other app
 (setq x-select-enable-clipboard t)
