@@ -19,6 +19,12 @@
 (require 'desktop)
 (desktop-save-mode 1)
 
+;; Modify the title of the emacs
+(setq frame-title-format "%f")
+
+;; Support the copy/past between emacs and other app
+(setq x-select-enable-clipboard t)
+
 ;; Yes or No to y/n
 (defalias 'yes-or-no-p 'y-or-n-p)
 
