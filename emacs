@@ -29,7 +29,7 @@
 ;; Recentf
 (require 'recentf)
 (recentf-mode 1)
-(global-set-key (kbd "C-c C-c") 'recentf-open-most-recent-file)
+(global-set-key (kbd "C-c C-v") 'recentf-open-most-recent-file)
 
 ;; Face settings
 (require 'face-settings)
