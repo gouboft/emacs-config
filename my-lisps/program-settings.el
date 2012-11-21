@@ -1,8 +1,20 @@
 ;; Set C language style
 (setq c-default-style "linux")
-(setq-default c-basic-offset 8
-	      tab-width 8
-	      indent-tabs-mode t)
+; C++ and JAVA file
+(defun my-indent-offset-cpp ()
+  (interactive)
+  (setq c-basic-offset 4
+        tab-width 8
+        indent-tabs-mode nil))
+(add-hook 'c++-mode-hook 'my-indent-offset-cpp)
+(add-hook 'java-mode-hook 'my-indent-offset-cpp)
+; C file
+(defun my-indent-offset-c ()
+  (interactive)
+  (setq c-basic-offset 8
+        tab-width 8
+        indent-tabs-mode t))
+(add-hook 'c-mode-hook 'my-indent-offset-c)
 
 ;; Auto add bracket and quotation marks
 (add-hook 'c-mode-hook 'hs-minor-mode)
