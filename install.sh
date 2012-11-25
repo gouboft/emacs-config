@@ -40,5 +40,8 @@ sudo cp ./tmp/xcscope.elc /usr/share/emacs23/site-lisp/cscope/xcscope.elc
 cd ./download/evernote-0.30/ruby
 sudo ruby setup.rb
 
+# 5. Set the soft links
+ln -s ~/.emacs.d/emacs-config/emacs/download/template/templates ~/.templates
+
 echo "    EMACS: Setup Done!"
 

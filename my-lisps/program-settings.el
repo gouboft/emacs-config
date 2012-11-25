@@ -94,5 +94,8 @@
 ;(require 'clang-completion-mode)
 (define-key global-map [(meta \-)]  'clang-completion-mode)
 
+;; Template
+(require 'template)
+(template-initialize)
 
 (provide 'program-settings)
