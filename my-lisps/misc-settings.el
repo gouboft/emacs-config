@@ -29,7 +29,7 @@
 (defalias 'yes-or-no-p 'y-or-n-p)
 
 ;; Input Methods
-(require 'eim-extra)
+;; 如果你忘了怎么启动这个中文输入法，那就按C-\。
 (autoload 'eim-use-package "eim" "Another emacs input method")
 (setq eim-use-tooltip nil)              ; don't use tooltip
 (setq eim-punc-translate-p nil)         ; use English punctuation
@@ -47,6 +47,7 @@
 ;; Set wubi for the default input method
 (setq default-input-method 'chinese-wubi)
 ;; 用 ; 暂时输入英文
+(require 'eim-extra)
 (global-set-key ";" 'eim-insert-ascii)
 (global-set-key (kbd "M-?") 'eim-punc-translate-toggle)
 
