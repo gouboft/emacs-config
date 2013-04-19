@@ -117,4 +117,10 @@
 (require 'template)
 (template-initialize)
 
+;; Column marker
+(require 'column-marker)
+;; C-c m to triger the highlight
+(global-set-key [?\C-c ?m] 'column-marker-1)
+(add-hook 'python-mode-hook (lambda () (interactive) (column-marker-1 80)))
+
 (provide 'program-settings)
