@@ -102,5 +102,6 @@
 
 ;; Add the chinese-gbk coding
 (prefer-coding-system 'chinese-gbk)
+(prefer-coding-system 'utf-8)
 
 (provide 'misc-settings)
