@@ -96,8 +96,11 @@
 (autoload 'markdown-mode "markdown-mode.el" "Major mode for editing Markdown files" t)
 (setq auto-mode-alist (cons '("\\.text" . markdown-mode) auto-mode-alist))
 
-(provide 'misc-settings)
-
 ;; Next / Previous buffer key bonding
 (global-set-key "\C-xn" 'next-buffer)
 (global-set-key "\C-xp" 'previous-buffer)
+
+;; Add the chinese-gbk coding
+(prefer-coding-system 'chinese-gbk)
+
+(provide 'misc-settings)
