@@ -113,4 +113,7 @@
 (add-to-list 'auto-mode-alist '("\\.md\\'" . markdown-mode))
 (add-to-list 'auto-mode-alist '("\\.Md\\'" . markdown-mode))
 
+;; Revert-buffer
+(global-set-key "\C-c\C-r" 'revert-buffer)
+
 (provide 'misc-settings)
