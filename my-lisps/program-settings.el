@@ -156,4 +156,7 @@
 ;; comment or uncomment
 (global-set-key [?\C-c ?\C-/] 'comment-or-uncomment-region)
 
+;; 十六进制模式 Hex mode
+;; M-x hexl-mode
+
 (provide 'program-settings)
