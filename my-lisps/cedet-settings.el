@@ -1,6 +1,6 @@
 ;; Load CEDET.
 ;; See cedet/common/cedet.info for configuration details.
-(defconst cedet-el-path (concat my-emacs-download-path "cedet-1.0pre7/common/cedet.el"))
+(defconst cedet-el-path (concat my-emacs-download-path "cedet-1.1/common/cedet.el"))
 (load-file cedet-el-path)
 
 
@@ -40,5 +40,6 @@
 (setq semantic-load-turn-everything-on t)
 
 (semantic-load-enable-excessive-code-helpers)
+(setq stack-trace-on-error t)
 
 (provide 'cedet-settings)

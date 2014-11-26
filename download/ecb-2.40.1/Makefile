@@ -52,7 +52,7 @@ EMACS=emacs
 #   Set this to the full path of your CEDET-installation.
 
 #CEDET=
-CEDET=../cedet-1.0pre7
+CEDET=../cedet-1.1
 
 # You can set here more load-paths to arbitrary packages if you want. But
 # this is really not necessary!
