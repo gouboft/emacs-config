@@ -12,8 +12,8 @@
       (kill-buffer (current-buffer))))
 
 ;; Disable Tool bar and Scroll bar
-(tool-bar-mode nil)
-(scroll-bar-mode nil)
+(tool-bar-mode 0)
+(scroll-bar-mode 0)
 
 ;; Desktop mode open
 (require 'desktop)
