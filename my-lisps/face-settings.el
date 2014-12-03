@@ -28,4 +28,6 @@
 (require 'vim)
 (vim-mode 1)
 
+(set-fontset-font "fontset-default" 'han '("WenQuanYi Zen Hei" . "unicode-bmp"))
+
 (provide 'face-settings)
