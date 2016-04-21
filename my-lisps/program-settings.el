@@ -159,4 +159,6 @@
 ;; 十六进制模式 Hex mode
 ;; M-x hexl-mode
 
+;; Php mode
+(require 'php-mode)
 (provide 'program-settings)
